@@ -76,7 +76,8 @@ Step1. Install YOLOX from source.
 ```shell
 git clone git@github.com:Megvii-BaseDetection/YOLOX.git
 cd YOLOX
-pip3 install -v -e .  # or  python3 setup.py develop
+pip install -r requirements.txt
+pip install -v -e .  # or  python3 setup.py develop
 ```
 
 </details>
@@ -89,11 +90,13 @@ Step1. Download a pretrained model from the benchmark table.
 Step2. Use either -n or -f to specify your detector's config. For example:
 
 ```shell
-python tools/demo.py image -n yolox-s -c /path/to/your/yolox_s.pth --path assets/dog.jpg --conf 0.25 --nms 0.45 --tsize 640 --save_result --device [cpu/gpu]
+wget https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_s.pth
+python tools/demo.py image -n yolox-s -c ./yolox_s.pth --path assets/dog.jpg --conf 0.25 --nms 0.45 --tsize 640 --save_result --device cpu
 ```
 or
 ```shell
-python tools/demo.py image -f exps/default/yolox_s.py -c /path/to/your/yolox_s.pth --path assets/dog.jpg --conf 0.25 --nms 0.45 --tsize 640 --save_result --device [cpu/gpu]
+wget https://github.com/Megvii-BaseDetection/YOLOX/releases/download/0.1.1rc0/yolox_s.pth
+python tools/demo.py image -f exps/default/yolox_s.py -c ./yolox_s.pth --path assets/dog.jpg --conf 0.25 --nms 0.45 --tsize 640 --save_result --device cpu
 ```
 Demo for video:
 ```shell
