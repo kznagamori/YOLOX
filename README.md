@@ -74,6 +74,8 @@ This repo is an implementation of PyTorch version YOLOX, there is also a [MegEng
 
 Step1. Install YOLOX from source.
 ```shell
+sudo apt-get update
+sudo apt-get install cmake
 git clone -b fix/20240628 https://github.com/kznagamori/YOLOX.git
 cd YOLOX
 pip install -r requirements.txt
