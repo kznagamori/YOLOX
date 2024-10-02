@@ -76,6 +76,7 @@ Step1. Install YOLOX from source.
 ```shell
 sudo apt-get update
 sudo apt-get install cmake
+sudo apt-get install libgl1-mesa-glx
 git clone -b fix/20240628 https://github.com/kznagamori/YOLOX.git
 cd YOLOX
 pip install -r requirements.txt
